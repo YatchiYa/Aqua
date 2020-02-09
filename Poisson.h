@@ -28,12 +28,24 @@ public:
 		this->m_name = name;
 		this->m_sex = sexe;
 		this->m_race = race;
+		if (race == "Merou" || race == "Thon" || race == "PoissonClown") {
+			this->m_type = "Carnivore";
+		}
+		if (race == "Bar" || race == "Sole" || race == "Carpe") {
+			this->m_type = "Herbivore";
+		}
 	};
 	Poisson(string name, string sexe, string race, int age) :Etrevivant(age)
 	{
 		this->m_name = name;
 		this->m_sex = sexe;
 		this->m_race = race;
+		if (race == "Merou" || race == "Thon" || race == "PoissonClown") {
+			this->m_type = "Carnivore";
+		}
+		if (race == "Bar" || race == "Sole" || race == "Carpe") {
+			this->m_type = "Herbivore";
+		}
 	};
 	string getNom();
 	void setNom(string name);
@@ -41,8 +53,8 @@ public:
 	void setRace(string race);
 	string getSexe();
 	void setSex(string sex);
-	string affectType(string race);
 	string getType();
+	string affectType(string race);
 
 	void manger();
 	Poisson makeBaby();

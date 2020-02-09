@@ -41,12 +41,13 @@ string Poisson::affectType(string race) {
 
 
 void Poisson::manger() {
+
 	if (this->getType() == "Carnivore") {
-		std::cout << " manger type poisson :" << this->getType() << std::endl;
+		std::cout << "\033[32m" << "  [Un poisson de type carnivore a manger un poisson] " << "\033[0m" << std::endl;
 		this->setHealthPoints(this->getHealthPoints() + 5);
 	}
 	else if (this->getType() == "Herbivore") {
-		std::cout << " manger type poisson :" << this->getType() << std::endl;
+		std::cout << "\033[32m" << "  [Un poisson de type herbivore a manger une algue] " << "\033[0m" << std::endl;
 		this->setHealthPoints(this->getHealthPoints() + 3);
 	}
 }

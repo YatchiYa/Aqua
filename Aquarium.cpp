@@ -66,10 +66,10 @@ void Aquarium::displayContent() {
 
 	ofstream flux;
 
-	//int status = remove("rapport.txt");
-	//if (status != 0)
-	//	return;
-	flux.open("data.txt", ios::app);
+	int status = remove("rapport.txt");
+	if (status != 0)
+		return;
+	flux.open("rapport.txt", ios::app);
 	if (flux) {
 		flux << "=======    Rapport de l'aquarium: "  << "=========\n" << std::endl;
 
@@ -168,6 +168,7 @@ void Aquarium::traitementPoisson(int p) {
 		this->getPoissonElt(p).takeDammage(1);
 		this->getPoissonElt(p).setAge(this->getPoissonElt(p).getAge() + 1);
 
+
 		if (this->getPoissonElt(p).getHealthPoints() < 5) {
 			int j = -1;
 
@@ -176,7 +177,6 @@ void Aquarium::traitementPoisson(int p) {
 
 				if (j != p && !(this->getPoissonElt(j).getRace() == this->getPoissonElt(p).getRace())) {
 					this->getPoissonElt(p).manger();
-					cout << "carnivore mange poisson famille" << endl;
 					this->getPoissonElt(j).takeDammage(4);
 				}
 			}
@@ -186,7 +186,6 @@ void Aquarium::traitementPoisson(int p) {
 					j = r % this->m_algues.size();
 				}
 				this->getPoissonElt(p).manger();
-				cout << "herbivore mange algue" << endl;
 				this->getAlgueElt(j).takeDammage(2);
 			}
 		}

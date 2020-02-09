@@ -1,9 +1,20 @@
-
-
-
 1 algues 10, 10 ans
 3 algues 10, 4 ans
 
-lin, M, Moru, 10, 10 ans
-linx, F, Moru, 10, 10 ans
+lin, M, Merou, 6, 10 ans
+linx, F, Merou, 6, 10 ans
+
+
+Anaclet, F, Poisson-clown, 10, 1 ans
+Jhin, M, Poisson-clown, 10, 1 ans
+Evariste, F, Thon, 10, 3 ans
+Jinx, F, Thon, 10, 3 ans
+
+sylia, F, Bar, 10, 3 ans.
+vladimir, M, Bar, 10, 3 ans.
+silouh, F, Sole, 10, 3 ans.
+vayne, M, Sole, 10, 3 ans.
+
+Segirt, F, Carpe, 10, 3 ans.
+Illaoi, F, Carpe, 10, 3 ans.
 

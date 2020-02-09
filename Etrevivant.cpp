@@ -35,7 +35,7 @@ void Etrevivant::takeDammage(int dammage) {
 bool Etrevivant::isAlive() {
 	int pv = this->getHealthPoints();
 	int age = this->getAge();
-	if (pv < 0 || age >= 20) {
+	if (pv <= 0 || age >= 20) {
 		return false;
 	}
 	else {
